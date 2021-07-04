@@ -12,7 +12,7 @@ def home():
 	return render_template('home.html')
 
 @app.route('/predict',methods=['POST'])
-def predict_fun():
+def predict_gender():
 	
     NB_blog_model = open('NB_blog_model.pkl','rb')
     clf = joblib.load(NB_blog_model)
